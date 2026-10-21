@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Royal Cut Barbearia: cortes, barba e agendamento rápido pelo WhatsApp.">
+  <title>Royal Cut Barbearia | Cortes e Barba</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO / MENU -->
+  <header class="topo">
+    <div class="container topo__conteudo">
+      <a href="#inicio" class="logo">Royal <span>Cut</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#agendar">Agendar</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INÍCIO -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <p class="hero__sobre">Tradição e estilo</p>
+        <h1>Seu corte, do jeito que você gosta.</h1>
+        <p class="hero__texto">Veja os serviços, confira os preços e peça seu horário em poucos cliques.</p>
+        <a href="#agendar" class="btn">Agendar horário</a>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS (os cards são criados pelo script.js) -->
+    <section class="secao" id="servicos">
+      <div class="container">
+        <h2>Serviços e preços</h2>
+        <div class="cards" id="listaServicos"></div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="secao secao--escura" id="galeria">
+      <div class="container">
+        <h2>Nossos trabalhos</h2>
+        <p class="secao__texto">Alguns dos estilos que fazemos por aqui.</p>
+        <div class="galeria">
+          <!-- Para usar foto real, troque o texto de cada bloco por:
+               <img src="img/corte1.jpg" alt="Corte degradê"> -->
+          <div class="galeria__item">Degradê</div>
+          <div class="galeria__item">Corte social</div>
+          <div class="galeria__item">Barba completa</div>
+          <div class="galeria__item">Navalhado</div>
+          <div class="galeria__item">Pigmentação</div>
+          <div class="galeria__item">Corte infantil</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section class="secao" id="agendar">
+      <div class="container container--estreito">
+        <h2>Agende seu horário</h2>
+        <p class="secao__texto">Preencha os dados e você será levado ao WhatsApp da barbearia com a mensagem pronta.</p>
+
+        <form id="formAgendamento" novalidate>
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" placeholder="Ex.: João Silva" required>
+
+          <label for="servico">Serviço</label>
+          <select id="servico" required></select>
+
+          <div class="linha">
+            <div>
+              <label for="data">Dia</label>
+              <input type="date" id="data" required>
+            </div>
+            <div>
+              <label for="hora">Horário</label>
+              <select id="hora" required></select>
+            </div>
+          </div>
+
+          <p class="erro" id="erro" role="alert"></p>
+          <button type="submit" class="btn btn--cheio">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="secao secao--escura" id="contato">
+      <div class="container">
+        <h2>Onde estamos</h2>
+        <div class="contato">
+          <div>
+            <h3>Horário de funcionamento</h3>
+            <p>Segunda a sexta: 09h às 19h</p>
+            <p>Sábado: 08h às 17h</p>
+            <p>Domingo: fechado</p>
+          </div>
+          <div>
+            <h3>Endereço</h3>
+            <p>Rua das Palmeiras, 250 - Centro</p>
+            <p>São Gonçalo - RJ</p>
+          </div>
+          <div>
+            <h3>Fale com a gente</h3>
+            <p><a id="linkWhats" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
+            <p><a href="#" target="_blank" rel="noopener">Instagram: @royalcut.exemplo</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© <span id="ano"></span> Royal Cut Barbearia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
